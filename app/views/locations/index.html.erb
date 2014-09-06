@@ -1,0 +1,55 @@
+<p><h1>Out?</h1></p>
+
+<p id="demo">Click the button to get your coordinates:</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+}
+</script>
+
+<p><h3>How much have you got?</h3></p>
+<script>
+$(function() {
+$( "#slider" ).slider({
+value:100,
+min: 0,
+max: 500,
+step: 10,
+slide: function( event, ui ) {
+$( "#amount" ).val( "£" + ui.value );
+}
+});
+$( "#amount" ).val( "£" + $( "#slider" ).slider( "value" ) );
+});
+</script>
+</head>
+<body>
+<p>
+<label for="amount">Your pocket:</label>
+<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider"></div>
+<%= link_to "Go", :controller => "locations", :action => "new" %>
+</body>
+</html>
+
+ 
+
+
+
+
+

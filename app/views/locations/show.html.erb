@@ -1,0 +1,26 @@
+
+<p>
+  <strong>Your location:</strong>
+  <%= @location.address %>
+</p>
+
+
+    <% @locations.each do |location| %>
+
+      <tr>
+        <td><%= location.address %></td><br>
+        <td><%= location.longitude %></td><br>
+        <td><%= location.latitude %></td>
+      </tr>
+    <% end %>
+
+
+<h3>Nearby activities</h3>
+<ul>
+<% for location in @location.nearbys(10) %>
+  <li><%= link_to location.latitude, location %> (<%= location.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
