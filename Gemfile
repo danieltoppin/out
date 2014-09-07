@@ -13,11 +13,9 @@ gem 'gmaps4rails'
 gem 'faker'
 gem 'will_paginate'
 gem 'jquery-ui-rails'
-gem 'sqlite3'
-gem 'pg'
 
 group :development, :test do
-     gem 'sqlite3'
+     
 end
 
 group :test do
