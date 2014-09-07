@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -45,11 +47,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem 'sqlite3'
-end
+# group :development do
+  
+# end
 group :production do
   gem 'pg'
+  #gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password

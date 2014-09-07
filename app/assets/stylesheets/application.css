@@ -12,9 +12,3 @@
  *= require_tree .
  *= require jquery.ui.slider
  */
-body { padding-top: 60px; }
-html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
