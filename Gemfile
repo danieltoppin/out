@@ -13,15 +13,6 @@ gem 'gmaps4rails'
 gem 'faker'
 gem 'will_paginate'
 gem 'jquery-ui-rails'
-
-group :development, :test do
-     
-end
-
-group :test do
-	gem 'rspec-rails'
-end
-group :production do
-     gem 'pg'
-     gem 'rails_12factor'
-end
+gem 'rspec-rails'
+gem 'pg'
+gem 'rails_12factor'
